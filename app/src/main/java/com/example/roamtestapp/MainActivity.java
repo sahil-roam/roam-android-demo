@@ -65,7 +65,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.create_user:
-                Roam.createUser("Test User", null, new RoamCallback() {
+//                Roam.createUser("Test User", null, new RoamCallback() {
+//                    @Override
+//                    public void onSuccess(RoamUser roamUser) {
+//                        Log.e("TEST", new Gson().toJson(roamUser));
+//                        userId = roamUser.getUserId();
+//                    }
+//
+//                    @Override
+//                    public void onFailure(RoamError roamError) {
+//                        Log.e("TEST", new Gson().toJson(roamError));
+//                    }
+//                });
+                Roam.getUser("628c90a38ce7db658edfe509", new RoamCallback() {
                     @Override
                     public void onSuccess(RoamUser roamUser) {
                         Log.e("TEST", new Gson().toJson(roamUser));
@@ -110,6 +122,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onSuccess(RoamUser roamUser) {
                         Log.e("TEST", new Gson().toJson(roamUser));
                         Roam.subscribe(Roam.Subscribe.LOCATION, userId);
+                        Roam.toggleEvents(true, true, true, true, new RoamCallback() {
+                            @Override
+                            public void onSuccess(RoamUser roamUser) {
+                                Log.e("TEST", new Gson().toJson(roamUser));
+                            }
+
+                            @Override
+                            public void onFailure(RoamError roamError) {
+                                Log.e("TEST", new Gson().toJson(roamError));
+                            }
+                        });
                     }
 
                     @Override
