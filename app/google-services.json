@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "560590197590",
+    "project_id": "roamtestapp",
+    "storage_bucket": "roamtestapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560590197590:android:f73526410e5d0bc234fcf7",
+        "android_client_info": {
+          "package_name": "com.example.roamtestapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560590197590-3p976ap3gol4q4j7jof68nhgggdi2hti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVLmIc9hgYKJUyBX5gyqg1EJGVhci2zI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560590197590-3p976ap3gol4q4j7jof68nhgggdi2hti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
